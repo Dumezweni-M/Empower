@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+                                        <!--   HOME AND ABOUT MENU CONTENT -->
+    <item
+        android:id="@+id/menuHome"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:textColor="#FFC107"
+        android:title="Home"/>
+    <item
+        android:id="@+id/menuAbout"
+        android:icon="@drawable/ic_baseline_emoji_people_24"
+        android:textColor="#FFC107"
+        android:title="About"/>
+
+                                       <!--   MONTHLY COURSE MENU CONTENT -->
+
+    <group android:id="@+id/group_week">
+        <item
+            android:id="@+id/group_heading"
+            android:title="6 Week Courses"
+            android:icon="@drawable/ic_baseline_extension_24"
+            android:enabled="false"
+            android:checkable="false" />
+        <item
+            android:id="@+id/menuCourseCooking"
+            android:textColor="#3F8042"
+            android:icon="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:title="Cooking"/>
+        <item
+            android:id="@+id/menuCourseChild"
+            android:textColor="#3F8042"
+            android:icon="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:title="Child Minding" />
+        <item
+            android:id="@+id/menuCourseGarden"
+            android:textColor="#3F8042"
+            android:icon="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:title="Garden Maintanance"/>
+    </group>
+
+                                      <!--    MONTHLY COURSE MENU CONTENT -->
+
+    <group android:id="@+id/group_month">
+        <item
+            android:title="6 Month Courses"
+            android:icon="@drawable/ic_baseline_extension_24"
+            android:enabled="false"
+            android:checkable="false" />
+        <item
+            android:id="@+id/menuCourseSewing"
+            android:icon="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:title="Sewing"/>
+        <item
+            android:id="@+id/menuCourseSkills"
+            android:icon="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:title="Life Skills"/>
+        <item
+            android:id="@+id/menuCourseAid"
+            android:icon="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:title="First-Aid"/>
+        <item
+            android:id="@+id/menuCourseScaping"
+            android:icon="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:title="landscaping"/>
+    </group>
+
+
+                                      <!--    PAYMENT AND CONTACT CONTENT -->
+    <group>
+        <item
+            android:id="@+id/menuPay"
+            android:icon="@drawable/ic_baseline_payment_24"
+            android:title="Pay"/>
+        <item
+            android:id="@+id/menuContact"
+            android:icon="@drawable/ic_baseline_phone_iphone_24"
+            android:title="Contact"/>
+
+    </group>
+
+</menu>
