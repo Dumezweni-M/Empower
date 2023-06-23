@@ -8,10 +8,11 @@
     android:padding="1dp"
     tools:context=".pay">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/line1"
+        android:background="@drawable/g"
         android:padding="40dp">
 
 
@@ -39,10 +40,26 @@
         <!--            app:layout_constraintBottom_toBottomOf="parent"-->
         <!--            app:layout_constraintEnd_toEndOf="parent" />-->
 
+        <ImageView
+            android:id="@+id/courseImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/etn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.175" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvItems"
             android:layout_width="match_parent"
-            android:layout_height="450dp"
+            android:layout_height="400dp"
             android:layout_marginTop="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
 
@@ -55,9 +72,9 @@
             android:id="@+id/tvSubTotal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="6dp"
-            android:text="SubTotal : "
             android:background="#FFFFFF"
+            android:padding="10dp"
+            android:text="SubTotal : "
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -67,10 +84,10 @@
             android:id="@+id/tvDiscount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="6dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
             android:text="Discount : "
             android:textSize="20sp"
-            android:background="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -82,11 +99,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:padding="6dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
             android:text="Total : "
             android:textSize="20sp"
             android:textStyle="bold"
-            android:background="#FFFFFF"
             app:layout_constraintBottom_toTopOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -111,7 +128,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="PAYMENT"
-            android:textSize="20sp"
+            android:textSize="44sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"

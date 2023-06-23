@@ -14,14 +14,12 @@ import com.google.android.material.navigation.NavigationView
 class pay : AppCompatActivity() {
 
     lateinit var toggle: ActionBarDrawerToggle
-    private lateinit var adapter: CartAdapter
-    private var cartList = mutableListOf<Cart>()
+//    private lateinit var adapter: CartAdapter
+    private val cartList = CartManager.cartList
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pay)
-
-
 
         var drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
@@ -45,7 +43,6 @@ class pay : AppCompatActivity() {
                     val intent = Intent(this@pay, about::class.java)
                     startActivity(intent)
                 }
-
 //-------------------------------    6 WEEK ACTIVITY SCREEN ----------------------------------------
 
                 R.id.menuCourseCooking -> {
@@ -106,25 +103,39 @@ class pay : AppCompatActivity() {
 
 //-------------------------------    RECYCLER VIEW    ----------------------------------------------
 
-         var cartList = mutableListOf(
-             Cart("Cooking", 750, true),
-//             Cart("Child Minding", 750, true),
-//             Cart("Garden Maintanance", 750, false),
-//             Cart("Sewing", 1500, true),
-//             Cart("First-Aid", 1500, false),
-//             Cart("Landscaping", 1500, true),
-         )
+//         var cartList = mutableListOf(
+////             Cart("Cooking", 750, true),
+////             Cart("Child Minding", 750, true),
+////             Cart("Garden Maintenance", 750, true),
+////             Cart("Sewing", 1500, true),
+//             Cart("First-Aid (6 Months)" , 1500, true),
+//             Cart("Life Skills (6 Months)", 1500, true),
+//             Cart("Landscaping (6 Months)", 1500, true),
+//         )
 
-        adapter = CartAdapter(cartList)
+
+
+
+
+        val adapter =  CartAdapter(cartList)
+        val rvItems = findViewById<RecyclerView>(R.id.rvItems)
+        rvItems.adapter = adapter
+        rvItems.layoutManager = LinearLayoutManager(this)
+
+
 
         val name = intent.getStringExtra("EXTRA_NAME")
         val price = intent.getIntExtra("EXTRA_VALUE", 750)
         val cartItem = name?.let { Cart(it, price, true) }
+
         if (cartItem != null) {
-            cartList.add(cartItem)
-            adapter.notifyDataSetChanged()
-            adapter.notifyItemInserted(cartList.size - 1)
+            CartManager.cartList.add (cartItem)
+            adapter.notifyItemInserted(cartList.size)
         }
+
+
+
+
 
         val cartSize = cartList.size
         var discountPercentage = 0.0
@@ -149,10 +160,7 @@ class pay : AppCompatActivity() {
         val tvTotal = findViewById<TextView>(R.id.tvTotal)
         tvTotal.text = "Total: R $total"
 
-        val adapter =  CartAdapter(cartList)
-        val rvItems = findViewById<RecyclerView>(R.id.rvItems)
-        rvItems.adapter = adapter
-        rvItems.layoutManager = LinearLayoutManager(this)
+
 
 
 

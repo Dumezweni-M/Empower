@@ -16,7 +16,7 @@
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
         android:paddingBottom="40dp"
-        android:background="@drawable/line1">
+        android:background="@drawable/g">
 
         <!-- Image at the Top Left Corner -->
         <ImageView
@@ -29,8 +29,8 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:scaleType="centerCrop"
             android:padding="10dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/etn" />
 
         <!-- Top Left Button -->
@@ -47,17 +47,7 @@
             android:textColor="#000000" />
 
         <!-- Top Right Button -->
-        <Button
-            android:id="@+id/btnlifenext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/courseImageView"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:background="#00FF00"
-            android:text="Next"
-            android:textColor="#000000" />
+
 
         <!-- Course Title -->
         <TextView
@@ -82,17 +72,20 @@
             android:layout_marginTop="16dp"
             android:background="#FFFFFF"
             android:text="Fees: R1500"
+            android:elevation="4dp"
             android:textSize="18sp" />
 
         <!-- Course Purpose -->
         <TextView
             android:id="@+id/coursePurposeTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/courseFeesTextView"
             android:layout_marginStart="16dp"
-            android:background="#FFFFFF"
             android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:padding="10dp"
             android:text="Purpose: To provide landscaping services for new and established gardens" />
 
         <!-- Course Content -->
@@ -112,9 +105,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/courseContentTextView"
             android:layout_marginStart="16dp"
-            android:background="#FFFFFF"
             android:layout_marginTop="8dp"
-            android:orientation="vertical">
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="15dp">
 
             <!-- Subtopic: Indigenous and Exotic Plants and Trees -->
             <TextView

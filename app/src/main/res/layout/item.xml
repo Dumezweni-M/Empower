@@ -12,7 +12,8 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#FFFFFF"
+        android:background="#03A9F4"
+        android:elevation="4dp"
         android:padding="10dp">
 
         <TextView
@@ -36,13 +37,15 @@
             app:layout_constraintEnd_toStartOf="@+id/cbDone"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <CheckBox
+        <RadioButton
             android:id="@+id/cbDone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
