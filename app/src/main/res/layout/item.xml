@@ -12,7 +12,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#DEF6DF"
+        android:background="#FFFFFF"
         android:padding="10dp">
 
         <TextView
