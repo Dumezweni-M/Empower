@@ -8,7 +8,7 @@ import com.example.empower.databinding.ItemBinding
 
 
 class CartAdapter(
-    var items: List<Cart>
+    var items: MutableList<Cart>
 ) : RecyclerView.Adapter<CartAdapter.CartViewHolder>(){
 
     inner class CartViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView)
@@ -26,9 +26,15 @@ class CartAdapter(
         val currentItem = items[position]
         val binding = ItemBinding.bind(holder.itemView)
 
-        binding.tvTitle.text = currentItem.title
-        binding.tvPrice.text = currentItem.price.toString()
-        binding.cbDone.isChecked = currentItem.isChecked
+        if (currentItem != null) {
+            binding.tvTitle.text = currentItem.title
+        }
+        if (currentItem != null) {
+            binding.tvPrice.text = currentItem.price.toString()
+        }
+        if (currentItem != null) {
+            binding.cbDone.isChecked = currentItem.isChecked
+        }
 
     }
 

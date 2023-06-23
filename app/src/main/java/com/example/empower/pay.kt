@@ -1,6 +1,5 @@
 package com.example.empower
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,15 +10,18 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
-import com.google.gson.Gson
 
 class pay : AppCompatActivity() {
 
     lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var adapter: CartAdapter
+    private var cartList = mutableListOf<Cart>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pay)
+
+
 
         var drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
@@ -106,31 +108,52 @@ class pay : AppCompatActivity() {
 
          var cartList = mutableListOf(
              Cart("Cooking", 750, true),
-             Cart("Child Minding", 750, true),
-             Cart("Garden Maintanance", 750, false),
-             Cart("Sewing", 1500, true),
-             Cart("Life Skills", 1500, true),
-             Cart("First-Aid", 1500, false),
-             Cart("Landscaping", 1500, true),
+//             Cart("Child Minding", 750, true),
+//             Cart("Garden Maintanance", 750, false),
+//             Cart("Sewing", 1500, true),
+//             Cart("First-Aid", 1500, false),
+//             Cart("Landscaping", 1500, true),
          )
 
+        adapter = CartAdapter(cartList)
+
+        val name = intent.getStringExtra("EXTRA_NAME")
+        val price = intent.getIntExtra("EXTRA_VALUE", 750)
+        val cartItem = name?.let { Cart(it, price, true) }
+        if (cartItem != null) {
+            cartList.add(cartItem)
+            adapter.notifyDataSetChanged()
+            adapter.notifyItemInserted(cartList.size - 1)
+        }
+
+        val cartSize = cartList.size
+        var discountPercentage = 0.0
+
+        when (cartSize) {
+            1 -> discountPercentage = 0.0
+            2 -> discountPercentage = 0.05
+            3 -> discountPercentage = 0.10
+            else -> discountPercentage = 0.15
+        }
 
         val subtotal = cartList.sumByDouble { it.price.toDouble() }
-        val tvSubTotal = findViewById<TextView>(R.id.tvSubTotal)
-        tvSubTotal.text = "Subtotal: $subtotal"
-
-        val discount = cartList.sumOf { it.price.toDouble() * 0.15}
-        val tvDiscount = findViewById<TextView>(R.id.tvDiscount)
-        tvDiscount.text = "Discount : $discount"
-
+        val discount = subtotal * discountPercentage
         val total = subtotal - discount
+
+        val tvSubTotal = findViewById<TextView>(R.id.tvSubTotal)
+        tvSubTotal.text = "Subtotal: R $subtotal"
+
+        val tvDiscount = findViewById<TextView>(R.id.tvDiscount)
+        tvDiscount.text = "$discountPercentage% " + " Discount : R $discount"
+
         val tvTotal = findViewById<TextView>(R.id.tvTotal)
-        tvTotal.text = "Total : $total"
+        tvTotal.text = "Total: R $total"
 
         val adapter =  CartAdapter(cartList)
         val rvItems = findViewById<RecyclerView>(R.id.rvItems)
         rvItems.adapter = adapter
         rvItems.layoutManager = LinearLayoutManager(this)
+
 
 
 //-------------------------------    MANUAL ADD TO CART (DNT DELETE YET)----------------------------
@@ -147,26 +170,15 @@ class pay : AppCompatActivity() {
 
 //-------------------------------    LIST VIEW      ------------------------------------------------
 
-//        val listView = findViewById<ListView>(R.id.listView)
-//
-//        val courseList = mutableListOf<String>()
-//
-//        val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
-//            this, android.R.layout.simple_list_item_1, courseList
-//        )
-//
-//        listView.adapter = arrayAdapter
-//
-//        listView.setOnItemClickListener { adapterView, view, i, l ->
-//            Toast.makeText(this, "Course clicked" + courseList[i], Toast.LENGTH_SHORT).show()
-//        }
-//
+
+
+
 //        val name = intent.getStringExtra("EXTRA_NAME",)
 //        val price = intent.getIntExtra("EXTRA_VALUE", 750)
 //
 //        val cookingCourse = "$name  R$price"
 //
-//        courseList.add(cookingCourse)
+//        cartList.add(cookingCourse)
 
 
 
@@ -210,5 +222,13 @@ class pay : AppCompatActivity() {
 
 
 
+
+}
+
+private operator fun Boolean.invoke(function: () -> Unit) {
+
+}
+
+private fun <E> MutableList<E>.add(element: String) {
 
 }

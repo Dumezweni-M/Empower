@@ -16,7 +16,7 @@
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
         android:paddingBottom="40dp"
-        android:background="@drawable/bglite">
+        android:background="@drawable/line1">
 
         <!-- Image at the Top Left Corner -->
         <ImageView
@@ -75,11 +75,12 @@
         <!-- Course Fees -->
         <TextView
             android:id="@+id/courseFeesTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/courseTitleTextView"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
             android:text="Fees: R1500"
             android:textSize="18sp" />
 
@@ -90,6 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/courseFeesTextView"
             android:layout_marginStart="16dp"
+            android:background="#FFFFFF"
             android:layout_marginTop="16dp"
             android:text="Purpose: To provide landscaping services for new and established gardens" />
 
@@ -110,6 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/courseContentTextView"
             android:layout_marginStart="16dp"
+            android:background="#FFFFFF"
             android:layout_marginTop="8dp"
             android:orientation="vertical">
 

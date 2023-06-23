@@ -57,6 +57,29 @@ class childMinding : AppCompatActivity() {
                     val intent = Intent(this@childMinding, gardenMaintanance::class.java)
                     startActivity(intent)
                 }
+//-----------------------------    6 MONTH COURSE ACTIVITY SCREEN ----------------------------------
+
+                R.id.menuCourseSewing -> {
+                    Toast.makeText(applicationContext, "Course clicked", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@childMinding, sewing::class.java)
+                    startActivity(intent)
+                }
+                R.id.menuCourseSkills -> {
+                    Toast.makeText(applicationContext, "Course clicked", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@childMinding, skills::class.java)
+                    startActivity(intent)
+                }
+                R.id.menuCourseAid -> {
+                    Toast.makeText(applicationContext, "Course clicked", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@childMinding, aid::class.java)
+                    startActivity(intent)
+                }
+                R.id.menuCourseScaping -> {
+                    Toast.makeText(applicationContext, "Course clicked", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@childMinding, scaping::class.java)
+                    startActivity(intent)
+                }
+
 
 //-----------------------------  PAY AND CONTACT ACTIVITY SCREEN -----------------------------------
 
@@ -85,7 +108,7 @@ class childMinding : AppCompatActivity() {
         val nameView = findViewById<TextView>(R.id.nameView)
 
         enrollBtn.setOnClickListener {
-            val name = "Child Minding course"
+            val name = "Child Minding (6 Weeks)"
             val price = 750
 
             Intent(this, pay::class.java).also {

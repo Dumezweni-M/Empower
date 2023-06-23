@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.system.Os.close
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
@@ -80,9 +81,7 @@ class skills : AppCompatActivity() {
                     startActivity(intent)
                 }
 
-
 //-----------------------------    PAY AND CONTACT ACTIVITY SCREEN----------------------------------
-
 
                 R.id.menuPay -> {
                     Toast.makeText(applicationContext, "Course clicked", Toast.LENGTH_SHORT).show()
@@ -98,6 +97,18 @@ class skills : AppCompatActivity() {
             true
         }
 
+//-----------------------------    PASS VALUES TO PAY SCREEN      ----------------------------------
+
+            val btnlifeskillenroll = findViewById<Button>(R.id.btnlifeskillenroll)
+            btnlifeskillenroll.setOnClickListener {
+            val name = "Life Skills  (6 months)"
+            val price = 1500
+
+            val intent = Intent(this@skills, pay::class.java)
+            intent.putExtra("EXTRA_NAME", name)
+            intent.putExtra("EXTRA_VALUE", price)
+            startActivity(intent)
+        }
 
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

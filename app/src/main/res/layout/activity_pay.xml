@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bglite"
+        android:background="@drawable/line1"
         android:padding="40dp">
 
 
@@ -57,6 +57,7 @@
             android:layout_height="wrap_content"
             android:padding="6dp"
             android:text="SubTotal : "
+            android:background="#FFFFFF"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,6 +70,7 @@
             android:padding="6dp"
             android:text="Discount : "
             android:textSize="20sp"
+            android:background="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -84,6 +86,7 @@
             android:text="Total : "
             android:textSize="20sp"
             android:textStyle="bold"
+            android:background="#FFFFFF"
             app:layout_constraintBottom_toTopOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

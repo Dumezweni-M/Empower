@@ -2,7 +2,7 @@ package com.example.empower
 
 data class Cart (
     val title: String,
-    val price: Int,
+    var price: Int,
     val isChecked : Boolean
 
 )

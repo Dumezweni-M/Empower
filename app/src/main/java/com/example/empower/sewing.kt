@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.system.Os.close
 import android.view.MenuItem
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
@@ -96,6 +98,23 @@ class sewing : AppCompatActivity() {
                 }
             }
             true
+        }
+
+//-------------------------------------ADD TO CART BUTTON-------------------------------------------
+
+        val btnenrollsewing = findViewById<Button>(R.id.btnenrollsewing)
+        val nameView = findViewById<TextView>(R.id.nameView)
+
+        btnenrollsewing.setOnClickListener {
+            val name = "Sewing (6 Months)"
+            val price = 1500
+
+            Intent(this, pay::class.java).also {
+                it.putExtra("EXTRA_NAME", name)
+                it.putExtra("EXTRA_VALUE", price)
+                startActivity(it)
+
+            }
         }
 
 

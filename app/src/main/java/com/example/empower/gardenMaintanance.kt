@@ -57,6 +57,29 @@ class gardenMaintanance : AppCompatActivity() {
                     val intent = Intent(this@gardenMaintanance, gardenMaintanance::class.java)
                     startActivity(intent)
                 }
+//-----------------------------    6 MONTH COURSE ACTIVITY SCREEN ----------------------------------
+
+                R.id.menuCourseSewing -> {
+                    Toast.makeText(applicationContext, "Course clicked", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@gardenMaintanance, sewing::class.java)
+                    startActivity(intent)
+                }
+                R.id.menuCourseSkills -> {
+                    Toast.makeText(applicationContext, "Course clicked", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@gardenMaintanance, skills::class.java)
+                    startActivity(intent)
+                }
+                R.id.menuCourseAid -> {
+                    Toast.makeText(applicationContext, "Course clicked", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@gardenMaintanance, aid::class.java)
+                    startActivity(intent)
+                }
+                R.id.menuCourseScaping -> {
+                    Toast.makeText(applicationContext, "Course clicked", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@gardenMaintanance, scaping::class.java)
+                    startActivity(intent)
+                }
+
 
 //-----------------------------  PAY AND CONTACT ACTIVITY SCREEN -----------------------------------
 
@@ -76,24 +99,17 @@ class gardenMaintanance : AppCompatActivity() {
 
 
 
-//-------------------------------------ADD TO CART BUTTON-------------------------------------------
-
-
+//-----------------------------    PASS VALUES TO PAY SCREEN      ----------------------------------
 
         val enrollBtn = findViewById<Button>(R.id.enrollBtn)
-        val priceView = findViewById<TextView>(R.id.priceView)
-        val nameView = findViewById<TextView>(R.id.nameView)
-
         enrollBtn.setOnClickListener {
-            val name = "Gardening"
+            val name = "Garden Maintenance (6 Weeks)"
             val price = 750
 
-            Intent(this, pay::class.java).also {
-                it.putExtra("EXTRA_NAME", name)
-                it.putExtra("EXTRA_VALUE", price)
-                startActivity(it)
-
-            }
+            val intent = Intent(this@gardenMaintanance, pay::class.java)
+            intent.putExtra("EXTRA_NAME", name)
+            intent.putExtra("EXTRA_VALUE", price)
+            startActivity(intent)
         }
 
 

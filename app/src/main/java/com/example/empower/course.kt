@@ -11,8 +11,6 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
-//data class Course(val name: String, val price: Int)
-
 class course : AppCompatActivity() {
 
     lateinit var toggle: ActionBarDrawerToggle
@@ -20,7 +18,6 @@ class course : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_course)
-
         var drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
@@ -41,6 +38,8 @@ class course : AppCompatActivity() {
                     val intent = Intent(this@course, about::class.java)
                     startActivity(intent)
                 }
+
+
 //-----------------------------    6 WEEK COURSE ACTIVITY SCREEN -----------------------------------
 
                 R.id.menuCourseCooking -> {
@@ -58,7 +57,6 @@ class course : AppCompatActivity() {
                     val intent = Intent(this@course, gardenMaintanance::class.java)
                     startActivity(intent)
                 }
-
 //-----------------------------    6 MONTH COURSE ACTIVITY SCREEN ----------------------------------
 
                 R.id.menuCourseSewing -> {
@@ -104,11 +102,10 @@ class course : AppCompatActivity() {
 //-------------------------------------ADD TO CART BUTTON-------------------------------------------
 
         val enrollBtn = findViewById<Button>(R.id.enrollBtn)
-        val priceView = findViewById<TextView>(R.id.priceView)
         val nameView = findViewById<TextView>(R.id.nameView)
 
         enrollBtn.setOnClickListener {
-            val name = "Cooking course"
+            val name = "Cooking Classes (6 Weeks)"
             val price = 750
 
             Intent(this, pay::class.java).also {
@@ -124,13 +121,6 @@ class course : AppCompatActivity() {
 
 
 
-
-
-
-
-
-
-
 //----------------------     END OF ON CREATE -------------------------------------------------------
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -139,6 +129,4 @@ class course : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-
-
 }
