@@ -103,7 +103,7 @@ class aid : AppCompatActivity() {
 //-------------------------------------ADD TO CART BUTTON-------------------------------------------
 
         val btnenrollfirst = findViewById<Button>(R.id.btnenrollfirst)
-        val nameView = findViewById<TextView>(R.id.nameView)
+
 
         btnenrollfirst.setOnClickListener {
             val name = "First-Aid (6 Months)"

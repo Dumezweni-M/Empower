@@ -113,10 +113,6 @@ class pay : AppCompatActivity() {
 //             Cart("Landscaping (6 Months)", 1500, true),
 //         )
 
-
-
-
-
         val adapter =  CartAdapter(cartList)
         val rvItems = findViewById<RecyclerView>(R.id.rvItems)
         rvItems.adapter = adapter
@@ -132,10 +128,6 @@ class pay : AppCompatActivity() {
             CartManager.cartList.add (cartItem)
             adapter.notifyItemInserted(cartList.size)
         }
-
-
-
-
 
         val cartSize = cartList.size
         var discountPercentage = 0.0
@@ -160,10 +152,6 @@ class pay : AppCompatActivity() {
         val tvTotal = findViewById<TextView>(R.id.tvTotal)
         tvTotal.text = "Total: R $total"
 
-
-
-
-
 //-------------------------------    MANUAL ADD TO CART (DNT DELETE YET)----------------------------
 // Dont forget to uncomment the button and edit text in pay XML
 
@@ -177,9 +165,6 @@ class pay : AppCompatActivity() {
 //        }
 
 //-------------------------------    LIST VIEW      ------------------------------------------------
-
-
-
 
 //        val name = intent.getStringExtra("EXTRA_NAME",)
 //        val price = intent.getIntExtra("EXTRA_VALUE", 750)

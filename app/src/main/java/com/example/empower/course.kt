@@ -102,7 +102,6 @@ class course : AppCompatActivity() {
 //-------------------------------------ADD TO CART BUTTON-------------------------------------------
 
         val enrollBtn = findViewById<Button>(R.id.enrollBtn)
-        val nameView = findViewById<TextView>(R.id.nameView)
 
         enrollBtn.setOnClickListener {
             val name = "Cooking Classes (6 Weeks)"

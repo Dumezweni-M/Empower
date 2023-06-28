@@ -103,7 +103,6 @@ class scaping : AppCompatActivity() {
 //-------------------------------------ADD TO CART BUTTON-------------------------------------------
 
         val btnlifeenroll = findViewById<Button>(R.id.btnlifeenroll)
-        val nameView = findViewById<TextView>(R.id.nameView)
 
         btnlifeenroll.setOnClickListener {
             val name = "Landscaping (6 Months)"

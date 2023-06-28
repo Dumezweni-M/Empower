@@ -7,60 +7,168 @@
     android:layout_height="match_parent"
     tools:context=".gardenMaintanance">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingLeft="40dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="10dp"
+        >
+
+        <!-- Image at the Top Left Corner -->
+
+
+        <!-- Top Left Button -->
+
+        <ImageView
+            android:id="@+id/courseImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/etn" />
+
+        <Button
+            android:id="@+id/btnbacksewing"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/courseImageView"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFEB3B"
+            android:text="Back"
+            android:textColor="#000000" />
+
+        <!-- Top Right Button -->
+        <Button
+            android:id="@+id/btnnextsewing"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/courseImageView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="#00FF00"
+            android:text="Next"
+            android:textColor="#000000"/>
+        <!--Image-->
+
+        <!-- Course Title -->
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/courseTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Garden Main"
-            android:textSize="50sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.307" />
+            android:layout_below="@id/btnbacksewing"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Garden Maintenence"
+            android:textColor="#4E4A4A"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
+        <!-- Course Fees -->
+        <TextView
+            android:id="@+id/courseFeesTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/courseTitleTextView"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:text="Fees: R750"
+            android:textSize="18sp" />
+
+        <!-- Course Purpose -->
+        <TextView
+            android:id="@+id/coursePurposeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/courseFeesTextView"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:text="Purpose: To provide basic knowledge of watering, pruning and planting in a domestic " />
+
+        <!-- Course Content -->
+        <TextView
+            android:id="@+id/courseContentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Content:"
+            android:textStyle="bold"
+            android:layout_below="@id/coursePurposeTextView"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
+
+        <!-- Course Subtopics -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/courseContentTextView"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Subtopic: Types of Stitches -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="• Water restrictions and the watering requirements of indigenous and exotic plants"
+                android:textSize="16sp" />
+
+            <!-- Subtopic: Threading a Sewing Machine -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="• Pruning and propagation of plants
+"
+                android:textSize="16sp" />
+
+            <!-- Subtopic: Sewing Buttons, Zips, Hems, and Seams -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="• Planting techniques for different plant types"
+                android:textSize="16sp" />
+
+            <!-- Subtopic: Alterations -->
+
+        </LinearLayout>
+
+        <!-- Bottom Button -->
         <Button
             android:id="@+id/enrollBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:background="#00FF00"
             android:text="Enroll"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
-            app:layout_constraintVertical_bias="0.151" />
+            android:textColor="#000000" />
 
-        <TextView
-            android:id="@+id/priceView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="R 750"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/nameView"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
-            app:layout_constraintVertical_bias="0.632" />
-
-        <TextView
-            android:id="@+id/nameView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="6 weeks"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/priceView"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/enrollBtn" />
+    </RelativeLayout>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--    NAVIGATION CODE-->
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navView"

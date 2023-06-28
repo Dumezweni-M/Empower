@@ -103,7 +103,7 @@ class sewing : AppCompatActivity() {
 //-------------------------------------ADD TO CART BUTTON-------------------------------------------
 
         val btnenrollsewing = findViewById<Button>(R.id.btnenrollsewing)
-        val nameView = findViewById<TextView>(R.id.nameView)
+
 
         btnenrollsewing.setOnClickListener {
             val name = "Sewing (6 Months)"

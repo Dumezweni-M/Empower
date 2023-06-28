@@ -104,8 +104,6 @@ class childMinding : AppCompatActivity() {
 
 
         val enrollBtn = findViewById<Button>(R.id.enrollBtn)
-        val priceView = findViewById<TextView>(R.id.priceView)
-        val nameView = findViewById<TextView>(R.id.nameView)
 
         enrollBtn.setOnClickListener {
             val name = "Child Minding (6 Weeks)"

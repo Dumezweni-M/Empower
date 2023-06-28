@@ -12,11 +12,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/g"
+
         android:padding="40dp">
 
-
         <!--        <EditText-->
+        <!-- android:background="@drawable/mp" -->
         <!--            android:id="@+id/etItem"-->
         <!--            android:layout_width="0dp"-->
         <!--            android:layout_height="wrap_content"-->
@@ -40,21 +40,7 @@
         <!--            app:layout_constraintBottom_toBottomOf="parent"-->
         <!--            app:layout_constraintEnd_toEndOf="parent" />-->
 
-        <ImageView
-            android:id="@+id/courseImageView"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:padding="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/etn"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.175" />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvItems"
@@ -111,16 +97,6 @@
             app:layout_constraintVertical_bias="0.0"
             tools:ignore="HardcodedText" />
 
-        <ListView
-            android:id="@+id/listView"
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/button2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textView"
