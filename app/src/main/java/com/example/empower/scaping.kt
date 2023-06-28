@@ -102,9 +102,9 @@ class scaping : AppCompatActivity() {
 
 //-------------------------------------ADD TO CART BUTTON-------------------------------------------
 
-        val btnlifeenroll = findViewById<Button>(R.id.btnlifeenroll)
+        val enrollBtn = findViewById<Button>(R.id.enrollBtn)
 
-        btnlifeenroll.setOnClickListener {
+        enrollBtn.setOnClickListener {
             val name = "Landscaping (6 Months)"
             val price = 1500
 
@@ -116,6 +116,20 @@ class scaping : AppCompatActivity() {
             }
         }
 
+ //-----------------------------  BUTTON NAVIGATION BACK AND NEXT------------------------------------
+
+        var btnBack = findViewById<Button>(R.id.btnBack)
+        var btnNext = findViewById<Button>(R.id.btnNext)
+
+        btnBack.setOnClickListener {
+            val intent = Intent(this, aid::class.java)
+            startActivity(intent)
+        }
+
+        btnNext.setOnClickListener {
+            val intent = Intent(this, course::class.java)
+            startActivity(intent)
+        }
 
 
     }

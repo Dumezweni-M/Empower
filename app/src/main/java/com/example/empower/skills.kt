@@ -99,8 +99,8 @@ class skills : AppCompatActivity() {
 
 //-----------------------------    PASS VALUES TO PAY SCREEN      ----------------------------------
 
-            val btnlifeskillenroll = findViewById<Button>(R.id.btnlifeskillenroll)
-            btnlifeskillenroll.setOnClickListener {
+            val enrollBtn = findViewById<Button>(R.id.enrollBtn)
+            enrollBtn.setOnClickListener {
             val name = "Life Skills  (6 months)"
             val price = 1500
 
@@ -109,6 +109,24 @@ class skills : AppCompatActivity() {
             intent.putExtra("EXTRA_VALUE", price)
             startActivity(intent)
         }
+
+//-----------------------------  BUTTON NAVIGATION BACK AND NEXT------------------------------------
+
+        var btnBack = findViewById<Button>(R.id.btnBack)
+        var btnNext = findViewById<Button>(R.id.btnNext)
+
+        btnBack.setOnClickListener {
+            val intent = Intent(this, sewing::class.java)
+            startActivity(intent)
+        }
+
+        btnNext.setOnClickListener {
+            val intent = Intent(this, aid::class.java)
+            startActivity(intent)
+        }
+
+
+
 
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

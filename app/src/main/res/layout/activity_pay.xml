@@ -12,59 +12,19 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:padding="40dp">
-
-        <!--        <EditText-->
-        <!-- android:background="@drawable/mp" -->
-        <!--            android:id="@+id/etItem"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginBottom="72dp"-->
-        <!--            android:hint="List Items"-->
-        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--            app:layout_constraintEnd_toStartOf="@+id/btnAddItem"-->
-        <!--            app:layout_constraintHorizontal_bias="0.0"-->
-        <!--            app:layout_constraintStart_toStartOf="parent" />-->
-
-
-        <!--        <Button-->
-        <!--            android:id="@+id/btnAddItem"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginEnd="8dp"-->
-        <!--            android:layout_marginBottom="48dp"-->
-        <!--            android:padding="16dp"-->
-        <!--            android:text="Add Item"-->
-        <!--            android:textSize="18sp"-->
-        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent" />-->
-
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvItems"
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/tvSubTotal"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:padding="10dp"
-            android:text="SubTotal : "
-            android:textSize="20sp"
+            android:padding="6dp"
+            android:text="Pay Now"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rvItems" />
+            app:layout_constraintTop_toBottomOf="@+id/tvTotal" />
 
         <TextView
             android:id="@+id/tvDiscount"
@@ -74,17 +34,41 @@
             android:padding="10dp"
             android:text="Discount : "
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvTotal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvSubTotal"
             tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvItems"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+
+            app:layout_constraintBottom_toTopOf="@+id/tvSubTotal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAYMENT"
+            android:textSize="44sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/rvItems"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvTotal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:background="#FFFFFF"
             android:padding="10dp"
             android:text="Total : "
@@ -92,38 +76,24 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvDiscount"
-            app:layout_constraintVertical_bias="0.0"
             tools:ignore="HardcodedText" />
 
-
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:id="@+id/tvSubTotal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="PAYMENT"
-            android:textSize="44sp"
-            android:textStyle="bold"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:text="SubTotal : "
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvDiscount"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:padding="6dp"
-            android:text="Pay Now"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.489"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTotal" />
+            app:layout_constraintTop_toBottomOf="@+id/rvItems" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

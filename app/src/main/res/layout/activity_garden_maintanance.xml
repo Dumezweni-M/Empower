@@ -11,157 +11,213 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="40dp"
-        android:paddingRight="50dp"
-        android:paddingBottom="10dp"
-        >
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
 
-        <!-- Image at the Top Left Corner -->
+        android:paddingBottom="0dp">
 
-
-        <!-- Top Left Button -->
-
-        <ImageView
-            android:id="@+id/courseImageView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:padding="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/etn" />
-
-        <Button
-            android:id="@+id/btnbacksewing"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_below="@id/courseImageView"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:background="#FFEB3B"
-            android:text="Back"
-            android:textColor="#000000" />
-
-        <!-- Top Right Button -->
-        <Button
-            android:id="@+id/btnnextsewing"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_below="@id/courseImageView"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:background="#00FF00"
-            android:text="Next"
-            android:textColor="#000000"/>
-        <!--Image-->
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp">
 
-        <!-- Course Title -->
 
-        <TextView
-            android:id="@+id/courseTitleTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/btnbacksewing"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:text="Garden Maintenence"
-            android:textColor="#4E4A4A"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/courseImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/etn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.004" />
 
-        <!-- Course Fees -->
-        <TextView
-            android:id="@+id/courseFeesTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/courseTitleTextView"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:background="#FFFFFF"
-            android:padding="10dp"
-            android:text="Fees: R750"
-            android:textSize="18sp" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/courseImageView">
 
-        <!-- Course Purpose -->
-        <TextView
-            android:id="@+id/coursePurposeTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/courseFeesTextView"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:background="#FFFFFF"
-            android:padding="10dp"
-            android:text="Purpose: To provide basic knowledge of watering, pruning and planting in a domestic " />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Garden Maintenance"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
-        <!-- Course Content -->
-        <TextView
-            android:id="@+id/courseContentTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Content:"
-            android:textStyle="bold"
-            android:layout_below="@id/coursePurposeTextView"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <!-- Course Subtopics -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/courseContentTextView"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:background="#FFFFFF"
-            android:orientation="vertical"
-            android:padding="20dp">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="116dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/courseImaeView">
 
-            <!-- Subtopic: Types of Stitches -->
-            <TextView
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:text="Basic knowledge of watering, pruning and planting in a domestic garden"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <ImageView
+                android:id="@+id/courseImaeView"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="4dp"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EEF1EE"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Course content:"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="Water restrictions and the watering requirements of indegenous and exotic plants"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="Pruning and prpagation of plants"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="Planting techniques for different plant types"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:padding="2dp"
+                    android:text="Introduction to mycology"
+                    android:textSize="24sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Duration: 6 Weeks"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Fees: R 750"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/enrollBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:text="• Water restrictions and the watering requirements of indigenous and exotic plants"
-                android:textSize="16sp" />
+                android:layout_marginTop="24dp"
+                android:background="#9DA39D"
+                android:text="Enroll"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-            <!-- Subtopic: Threading a Sewing Machine -->
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:text="• Pruning and propagation of plants
-"
-                android:textSize="16sp" />
+                android:layout_margin="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/enrollBtn">
 
-            <!-- Subtopic: Sewing Buttons, Zips, Hems, and Seams -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:text="• Planting techniques for different plant types"
-                android:textSize="16sp" />
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Back" />
 
-            <!-- Subtopic: Alterations -->
+                <Space
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content" />
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Next" />
 
-        <!-- Bottom Button -->
-        <Button
-            android:id="@+id/enrollBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="16dp"
-            android:background="#00FF00"
-            android:text="Enroll"
-            android:textColor="#000000" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
     </RelativeLayout>
 

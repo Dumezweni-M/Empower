@@ -115,7 +115,20 @@ class course : AppCompatActivity() {
             }
         }
 
+//-----------------------------  BUTTON NAVIGATION BACK AND NEXT------------------------------------
 
+        var btnBack = findViewById<Button>(R.id.btnBack)
+        var btnNext = findViewById<Button>(R.id.btnNext)
+
+        btnBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnNext.setOnClickListener {
+            val intent = Intent(this, childMinding::class.java)
+            startActivity(intent)
+        }
 
 
 

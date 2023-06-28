@@ -102,10 +102,10 @@ class sewing : AppCompatActivity() {
 
 //-------------------------------------ADD TO CART BUTTON-------------------------------------------
 
-        val btnenrollsewing = findViewById<Button>(R.id.btnenrollsewing)
+        val enrollBtn = findViewById<Button>(R.id.enrollBtn)
 
 
-        btnenrollsewing.setOnClickListener {
+        enrollBtn.setOnClickListener {
             val name = "Sewing (6 Months)"
             val price = 1500
 
@@ -116,6 +116,22 @@ class sewing : AppCompatActivity() {
 
             }
         }
+
+//-----------------------------  BUTTON NAVIGATION BACK AND NEXT------------------------------------
+
+        var btnBack = findViewById<Button>(R.id.btnBack)
+        var btnNext = findViewById<Button>(R.id.btnNext)
+
+        btnBack.setOnClickListener {
+            val intent = Intent(this, gardenMaintanance::class.java)
+            startActivity(intent)
+        }
+
+        btnNext.setOnClickListener {
+            val intent = Intent(this, skills::class.java)
+            startActivity(intent)
+        }
+
 
 
     }

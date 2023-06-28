@@ -12,7 +12,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#03A9F4"
+        android:background="#F6F4E6"
         android:elevation="4dp"
         android:padding="10dp">
 

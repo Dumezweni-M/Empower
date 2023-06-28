@@ -7,163 +7,220 @@
     android:layout_height="match_parent"
     tools:context=".skills">
 
-    <!--    Your code will sit in here-->
-
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
-        android:paddingBottom="40dp"
-        android:background="@drawable/g"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp"
         >
 
-        <!-- Image at the Top Left Corner -->
-        <ImageView
-            android:id="@+id/courseImageView"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:padding="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/etn" />
-
-        <!-- Top Left Button -->
-        <Button
-            android:id="@+id/btnlifeskillback"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/courseImageView"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:background="#00FF00"
-            android:text="Back"
-            android:textColor="#000000" />
-
-        <!-- Top Right Button -->
-        <Button
-            android:id="@+id/btnlifeskillnext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/courseImageView"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:background="#00FF00"
-            android:text="Next"
-            android:textColor="#000000" />
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp">
 
-        <!-- Course Title -->
-        <TextView
-            android:id="@+id/courseTitleTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/btnlifeskillback"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:text="Life Skills"
-            android:textColor="#000000"
-            android:textSize="44sp"
-            android:textStyle="bold" />
 
-        <!-- Course Fees -->
-        <TextView
-            android:id="@+id/courseFeesTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/courseTitleTextView"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Fees: R1500"
-            android:background="#FFFFFF"
-            android:textSize="18sp" />
+            <ImageView
+                android:id="@+id/courseImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/etn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.004" />
 
-        <!-- Course Purpose -->
-        <TextView
-            android:id="@+id/coursePurposeTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/courseFeesTextView"
-            android:layout_marginStart="16dp"
-            android:background="#FFFFFF"
-            android:layout_marginTop="16dp"
-            android:text="Purpose: To provide skills to navigate basic life necessities" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/courseImageView">
 
-        <!-- Course Content -->
-        <TextView
-            android:id="@+id/courseContentTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/coursePurposeTextView"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Content:"
-            android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Life Skills"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
-        <!-- Course Subtopics -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/courseContentTextView"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:background="#FFFFFF"
-            android:orientation="vertical">
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <!-- Subtopic: Opening a Bank Account -->
-            <TextView
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="116dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/courseImaeView">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:text="Skills to navigate basic life necessities"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <ImageView
+                android:id="@+id/courseImaeView"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="4dp"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ski"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EEF1EE"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Course content:"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="Basic labour law (Know your rights)"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="Opening a bank account"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="Basic reading and writing literacy"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:padding="2dp"
+                    android:text="Basic numeric literacy"
+                    android:textSize="24sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Duration: 6 months"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Fees: R 1500"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/enrollBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:text="• Opening a bank account"
-                android:textSize="16sp" />
+                android:layout_marginTop="24dp"
+                android:background="#9DA39D"
+                android:text="Enroll"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-            <!-- Subtopic: Basic Labour Law -->
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:text="• Basic labour law (know your rights)"
-                android:textSize="16sp" />
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/enrollBtn">
 
-            <!-- Subtopic: Basic Reading and Writing Literacy -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:text="• Basic reading and writing literacy"
-                android:textSize="16sp" />
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Back" />
 
-            <!-- Subtopic: Basic Numeric Literacy -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:text="• Basic numeric literacy"
-                android:textSize="16sp" />
+                <Space
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content" />
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Next" />
 
-        <!-- Bottom Button -->
-        <Button
-            android:id="@+id/btnlifeskillenroll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="16dp"
-            android:background="#00FF00"
-            android:text="Enroll"
-            android:textColor="#000000" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
     </RelativeLayout>
+
 
 
 
