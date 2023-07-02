@@ -1,9 +1,11 @@
 package com.example.empower
 
+import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.*
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
@@ -14,8 +16,12 @@ import com.google.android.material.navigation.NavigationView
 class pay : AppCompatActivity() {
 
     lateinit var toggle: ActionBarDrawerToggle
-//    private lateinit var adapter: CartAdapter
     private val cartList = CartManager.cartList
+
+    lateinit var payDialog: Dialog
+    lateinit var successDialog: Dialog
+    private lateinit var dialogTotal: TextView
+    private lateinit var dialogDiscount: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,29 +40,24 @@ class pay : AppCompatActivity() {
         navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.menuHome -> {
-                    Toast.makeText(applicationContext, "Home Clicked", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this@pay, MainActivity::class.java)
                     startActivity(intent)
                 }
                 R.id.menuAbout -> {
-                    Toast.makeText(applicationContext, "About Clicked", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this@pay, about::class.java)
                     startActivity(intent)
                 }
 //-------------------------------    6 WEEK ACTIVITY SCREEN ----------------------------------------
 
                 R.id.menuCourseCooking -> {
-                    Toast.makeText(applicationContext, "Course clicked", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this@pay, course::class.java)
                     startActivity(intent)
                 }
                 R.id.menuCourseChild -> {
-                    Toast.makeText(applicationContext, "Course clicked", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this@pay, childMinding::class.java)
                     startActivity(intent)
                 }
                 R.id.menuCourseGarden -> {
-                    Toast.makeText(applicationContext, "Course clicked", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this@pay, gardenMaintanance::class.java)
                     startActivity(intent)
                 }
@@ -147,22 +148,50 @@ class pay : AppCompatActivity() {
         tvSubTotal.text = "Subtotal: R $subtotal"
 
         val tvDiscount = findViewById<TextView>(R.id.tvDiscount)
-        tvDiscount.text = "$discountPercentage% " + " Discount : R $discount"
+        tvDiscount.text = " - $discountPercentage% " + " \n " + " Discount : R $discount "
 
         val tvTotal = findViewById<TextView>(R.id.tvTotal)
         tvTotal.text = "Total: R $total"
 
-//-------------------------------    MANUAL ADD TO CART (DNT DELETE YET)----------------------------
-// Dont forget to uncomment the button and edit text in pay XML
+//-------------------------------    POP UP FOR CONFIRM PURCHASE -----------------------------------
+        var dialogTotal: TextView? = null
+        var dialogDiscount: TextView? = null
 
-//        val etItem = findViewById<EditText>(R.id.etItem)
-//        val btnAddItem = findViewById<Button>(R.id.btnAddItem)
-//        btnAddItem.setOnClickListener {
-//            val title = etItem.text.toString()
-//            val item = Cart(title, 0, true)
-//            cartList.add(item)
-//            adapter.notifyItemInserted(cartList.size -1)
-//        }
+        var confirmBtn = findViewById<Button>(R.id.confirmBtn)
+
+        payDialog = Dialog(this)
+        payDialog.setContentView(R.layout.paydialog)
+
+        dialogTotal = payDialog.findViewById(R.id.dialogTotal)
+        dialogDiscount = payDialog.findViewById(R.id.dialogDiscount)
+
+        val btnPay = findViewById<Button>(R.id.button2)
+        btnPay.setOnClickListener {
+            if (cartSize == 0) {
+                Toast.makeText(applicationContext, "Select at least one course to continue", Toast.LENGTH_SHORT).show()
+            } else {
+                dialogTotal?.text = tvTotal.text.toString()
+                dialogDiscount?.text = tvDiscount.text.toString()
+                payDialog.show()
+            }
+        }
+
+//-----------------------------  BUTTON NAVIGATION BACK AND NEXT------------------------------------
+
+        var btnBack = findViewById<Button>(R.id.btnBack)
+        var btnNext = findViewById<Button>(R.id.btnNext)
+
+        btnBack.setOnClickListener {
+            val intent = Intent(this, scaping::class.java)
+            startActivity(intent)
+        }
+
+        btnNext.setOnClickListener {
+            val intent = Intent(this, contact::class.java)
+            startActivity(intent)
+        }
+
+
 
 //-------------------------------    LIST VIEW      ------------------------------------------------
 
@@ -206,6 +235,15 @@ class pay : AppCompatActivity() {
             return true
         }
         return super.onOptionsItemSelected(item)
+
+
+         fun showSuccessDialog() {
+            successDialog = Dialog(this)
+            successDialog.setContentView(R.layout.success)
+            successDialog.show()
+        }
+
+
     }
 
 

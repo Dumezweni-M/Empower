@@ -3,26 +3,37 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/drawable/background.xml" value="0.1965" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/drawable/bgtext.xml" value="0.271" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/drawable/etn.xml" value="0.1425" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/drawable/ic_baseline_extension_24.xml" value="0.2085" />
+        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/drawable/rounded.xml" value="0.1585" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/drawable/sd1.xml" value="0.271" />
+        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/drawable/stroke.xml" value="0.136" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/about.xml" value="0.13645833333333332" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_about.xml" value="0.22" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_aid.xml" value="0.2" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_child_minding.xml" value="0.18" />
-        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_contact.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_course.xml" value="0.25" />
+        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_contact.xml" value="0.2" />
+        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_course.xml" value="0.2125" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_garden_maintanance.xml" value="0.22" />
-        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_main.xml" value="0.2099673202614379" />
-        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_pay.xml" value="0.2099673202614379" />
+        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_monthsummary.xml" value="0.22" />
+        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_pay.xml" value="0.25" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_scaping.xml" value="0.25" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_sewing.xml" value="0.2" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_skills.xml" value="0.22" />
+        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_success.xml" value="0.1" />
+        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_week_summary.xml" value="0.18" />
+        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/activity_weeksummary.xml" value="0.22" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/item.xml" value="0.25" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/list_item.xml" value="0.1" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/list_items.xml" value="0.5" />
+        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/monthsummary.xml" value="0.18" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/nav_header.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/paydialog.xml" value="0.25" />
+        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/success.xml" value="0.14895833333333333" />
+        <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/layout/weeksummary.xml" value="0.25" />
         <entry key="..\:/Users/lab_services_student/AndroidStudioProjects/Empower/app/src/main/res/menu/nav_drawer_menu.xml" value="0.25" />
       </map>
     </option>

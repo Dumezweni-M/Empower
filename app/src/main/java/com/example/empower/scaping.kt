@@ -127,7 +127,7 @@ class scaping : AppCompatActivity() {
         }
 
         btnNext.setOnClickListener {
-            val intent = Intent(this, course::class.java)
+            val intent = Intent(this, pay::class.java)
             startActivity(intent)
         }
 

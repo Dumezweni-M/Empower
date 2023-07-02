@@ -1,10 +1,12 @@
 package com.example.empower
 
+import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.system.Os.close
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
@@ -13,6 +15,8 @@ import com.google.android.material.navigation.NavigationView
 class MainActivity : AppCompatActivity() {
 
     lateinit var toggle: ActionBarDrawerToggle
+    lateinit var weekDialog: Dialog
+    lateinit var monthDialog: Dialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -96,6 +100,20 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             true
+        }
+
+//-----------------------------    SUMMARY PAGES    ------------------------------------------------
+
+    val btnWeeks = findViewById<Button>(R.id.btnWeeks)
+        btnWeeks.setOnClickListener {
+            val intent = Intent (this@MainActivity, weekSummary::class.java)
+            startActivity(intent)
+        }
+
+    val btnMonths = findViewById<Button>(R.id.btnMonths)
+        btnMonths.setOnClickListener {
+            val intent = Intent (this@MainActivity, monthSummary::class.java)
+            startActivity(intent)
         }
 
 
