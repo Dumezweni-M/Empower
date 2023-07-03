@@ -13,7 +13,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="40dp">
+        android:paddingLeft="40dp"
+        android:paddingTop="40dp"
+        android:paddingRight="40dp">
 
         <Button
             android:id="@+id/button2"
@@ -32,27 +34,25 @@
             android:id="@+id/tvDiscount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:background="@drawable/rounded"
-            android:padding="16dp"
+            android:padding="12dp"
             android:text="Discount : "
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/tvTotal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvSubTotal"
+            app:layout_constraintTop_toBottomOf="@+id/tvVAT"
             tools:ignore="HardcodedText" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvItems"
             android:layout_width="match_parent"
             android:layout_height="350dp"
-
-            app:layout_constraintBottom_toTopOf="@+id/tvSubTotal"
+            android:layout_marginTop="76dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView"
@@ -63,9 +63,9 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/rvItems"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.08" />
 
         <TextView
             android:id="@+id/tvTotal"
@@ -87,15 +87,29 @@
             android:id="@+id/tvSubTotal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:background="@drawable/rounded"
-            android:padding="16dp"
+            android:padding="12dp"
             android:text="SubTotal : "
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/tvDiscount"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rvItems" />
+
+        <TextView
+            android:id="@+id/tvVAT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded"
+            android:padding="12dp"
+            android:text="VAT (15%) : "
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubTotal" />
 
         <LinearLayout
             android:id="@+id/linearLayout2"

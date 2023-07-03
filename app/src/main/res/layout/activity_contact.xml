@@ -9,7 +9,7 @@
     android:background="@drawable/background"
     >
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         android:id="@+id/btncontactusback"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,7 +28,7 @@
             <!-- Spacer -->
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="16dp" />
+                android:layout_height="10dp" />
 
             <!-- Logo -->
             <ImageView
@@ -56,13 +56,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="16dp" />
 
+
             <!-- Location 1: Sandton -->
+            <Button
+                android:id="@+id/queries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0000FF"
+                android:text="General Enquiries" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/stroke"
                 android:layout_margin="5dp"
                 android:orientation="vertical"
+                android:elevation="5dp"
                 android:padding="20dp">
 
                 <!-- Location details -->
@@ -100,7 +109,7 @@
             <!-- Spacer -->
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                android:layout_height="10dp" />
 
             <!-- Location 2: Pretoria -->
             <LinearLayout
@@ -109,6 +118,7 @@
                 android:background="@drawable/stroke"
                 android:layout_margin="5dp"
                 android:orientation="vertical"
+                android:elevation="5dp"
                 android:padding="20dp">
 
                 <!-- Location details -->
@@ -146,7 +156,7 @@
             <!-- Spacer -->
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                android:layout_height="10dp" />
 
             <!-- Location 3: Johannesburg CBD -->
             <LinearLayout
@@ -155,6 +165,7 @@
                 android:background="@drawable/stroke"
                 android:layout_margin="5dp"
                 android:orientation="vertical"
+                android:elevation="5dp"
                 android:padding="20dp">
 
                 <!-- Location details -->
@@ -190,10 +201,13 @@
 
             </LinearLayout>
 
+
+
             <!-- Spacer -->
+
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="30dp" />
+                android:layout_height="10dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -207,7 +221,7 @@
 
                 <Button
                     android:id="@+id/btnBack"
-                    android:layout_width="0dp"
+                    android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#0000FF"
@@ -219,7 +233,7 @@
 
                 <Button
                     android:id="@+id/btnNext"
-                    android:layout_width="0dp"
+                    android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#FFCA28"

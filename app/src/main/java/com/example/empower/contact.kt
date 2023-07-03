@@ -103,6 +103,7 @@ class contact : AppCompatActivity() {
 
         var btnBack = findViewById<Button>(R.id.btnBack)
         var btnNext = findViewById<Button>(R.id.btnNext)
+        var query = findViewById<Button>(R.id.queries)
 
         btnBack.setOnClickListener {
             val intent = Intent(this, pay::class.java)
@@ -113,6 +114,13 @@ class contact : AppCompatActivity() {
             val intent = Intent(this, about::class.java)
             startActivity(intent)
         }
+
+        query.setOnClickListener {
+            val intent = Intent(this, Queries::class.java)
+            startActivity(intent)
+
+        }
+
 
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -141,40 +141,58 @@ class pay : AppCompatActivity() {
         }
 
         val subtotal = cartList.sumByDouble { it.price.toDouble() }
+        var tax = 0.15
+        val plusTax = subtotal * tax
         val discount = subtotal * discountPercentage
-        val total = subtotal - discount
+        val total = subtotal + plusTax - discount
 
         val tvSubTotal = findViewById<TextView>(R.id.tvSubTotal)
         tvSubTotal.text = "Subtotal: R $subtotal"
 
+        val vat = findViewById<TextView>(R.id.tvVAT)
+        vat.text = "VAT (15%) : $plusTax"
+
         val tvDiscount = findViewById<TextView>(R.id.tvDiscount)
-        tvDiscount.text = " - $discountPercentage% " + " \n " + " Discount : R $discount "
+        tvDiscount.text = "Discount : R $discount "
 
         val tvTotal = findViewById<TextView>(R.id.tvTotal)
         tvTotal.text = "Total: R $total"
 
 //-------------------------------    POP UP FOR CONFIRM PURCHASE -----------------------------------
-        var dialogTotal: TextView? = null
-        var dialogDiscount: TextView? = null
-
-        var confirmBtn = findViewById<Button>(R.id.confirmBtn)
-
-        payDialog = Dialog(this)
-        payDialog.setContentView(R.layout.paydialog)
-
-        dialogTotal = payDialog.findViewById(R.id.dialogTotal)
-        dialogDiscount = payDialog.findViewById(R.id.dialogDiscount)
+//        var dialogTotal: TextView? = null
+//        var dialogDiscount: TextView? = null
+//
+//
+//
+//        payDialog = Dialog(this)
+//        payDialog.setContentView(R.layout.paydialog)
+//
+//        dialogTotal = payDialog.findViewById(R.id.dialogTotal)
+//        dialogDiscount = payDialog.findViewById(R.id.dialogDiscount)
+//
+//        val btnPay = findViewById<Button>(R.id.button2)
+//        btnPay.setOnClickListener {
+//            if (cartSize == 0) {
+//                Toast.makeText(applicationContext, "Select at least one course to continue", Toast.LENGTH_SHORT).show()
+//            } else {
+//                dialogTotal?.text = tvTotal.text.toString()
+//                dialogDiscount?.text = tvDiscount.text.toString()
+//                payDialog.show()
+//            }
+//        }
 
         val btnPay = findViewById<Button>(R.id.button2)
         btnPay.setOnClickListener {
             if (cartSize == 0) {
                 Toast.makeText(applicationContext, "Select at least one course to continue", Toast.LENGTH_SHORT).show()
             } else {
-                dialogTotal?.text = tvTotal.text.toString()
-                dialogDiscount?.text = tvDiscount.text.toString()
-                payDialog.show()
+                val intent = Intent(this, form::class.java)
+                intent.putExtra("totalAmount", total)
+                startActivity(intent)
             }
         }
+
+
 
 //-----------------------------  BUTTON NAVIGATION BACK AND NEXT------------------------------------
 
@@ -235,13 +253,6 @@ class pay : AppCompatActivity() {
             return true
         }
         return super.onOptionsItemSelected(item)
-
-
-         fun showSuccessDialog() {
-            successDialog = Dialog(this)
-            successDialog.setContentView(R.layout.success)
-            successDialog.show()
-        }
 
 
     }

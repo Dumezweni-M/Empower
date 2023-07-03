@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="30dp">
+        android:padding="50dp">
 
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -38,33 +38,37 @@
             android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/stroke"
             android:orientation="vertical"
             android:padding="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/discountInfoTextView">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+            tools:layout_editor_absoluteX="50dp">
 
             <TextView
                 android:id="@+id/discountMoreThanThreeTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="We reward driven and dedicated individuals. Receive discounts for applying to 2 or more training programs."
+                android:text="Driven and dedicated individuals. Receive discounts for applying to 2 or more training programs."
+                android:textColor="#959292"
                 android:textSize="25sp" />
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/stroke"
+            android:elevation="5dp"
             android:orientation="vertical"
-            android:padding="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/discountInfoTextView"
+            tools:layout_editor_absoluteX="30dp">
 
             <!-- First Row -->
             <TextView
@@ -73,8 +77,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingTop="10dp"
-                android:paddingBottom="40dp"
-                android:text="we offer a range of courses designed to upskill individuals and increase their employment opportunities."
+                android:paddingBottom="30dp"
+                android:text="Our range of courses are designed to upskill individuals and increase their employment opportunities."
                 android:textSize="30sp" />
 
             <LinearLayout
@@ -88,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Short Courses (6 weeks)"
-                    android:textSize="25sp" />
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/btnWeeks"
@@ -110,7 +114,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Extended courses (6 Months)"
-                    android:textSize="25sp" />
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/btnMonths"
@@ -126,13 +130,16 @@
             android:id="@+id/discountInfoTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/stroke"
             android:gravity="center"
             android:padding="20dp"
             android:text="We understand the importance of skills training and education in today's competitive job market."
+            android:textColor="#81C784"
             android:textSize="30sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.733"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
 
@@ -142,7 +149,7 @@
             android:layout_height="140dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="16dp"
             android:padding="10dp"
             android:scaleType="centerCrop"
             android:src="@drawable/etn"

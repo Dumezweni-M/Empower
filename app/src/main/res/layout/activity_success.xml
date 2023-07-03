@@ -2,11 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="450dp"
-    android:layout_height="700dp"
-    android:layout_gravity="center"
-    android:background="@drawable/rounded"
-    android:padding="30dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="90dp"
+    tools:context=".Success">
 
     <TextView
         android:id="@+id/tvBillingAddress"
@@ -14,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:hint="you should receive a SMS or Email confirmation shortly "
+        android:hint="You will receive a SMS or Email confirmation shortly "
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +37,7 @@
         android:id="@+id/tvhead"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:gravity="center"
         android:hint="Payment Successful"
         android:textSize="55sp"
@@ -47,7 +47,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/successBtn"
+        android:id="@+id/homeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
